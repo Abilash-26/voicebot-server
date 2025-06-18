@@ -81,15 +81,15 @@ app.post("/api/chat", async (req, res) => {
 
 
 
-const buildPath = path.join(__dirname, "../Client/build"); 
+// const buildPath = path.join(__dirname, "../Client/build"); 
 
-console.log("Serving React app from:", buildPath);
+// console.log("Serving React app from:", buildPath);
 
-app.use(express.static(buildPath));
+// app.use(express.static(buildPath));
 
-app.get("*", (req, res) => {
-  res.sendFile(path.join(buildPath, "index.html"));
-});
+// app.get("*", (req, res) => {
+//   res.sendFile(path.join(buildPath, "index.html"));
+// });
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () =>
